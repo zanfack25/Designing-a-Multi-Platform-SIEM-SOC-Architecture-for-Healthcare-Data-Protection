@@ -372,8 +372,6 @@ Microsoft Defender for Cloud was deployed to provide cloud security posture and 
 
 The implementation focused on:
 
-Security recommendations<img width="1547" height="931" alt="Screenshot from 2026-08-04 03-26-19" src="https://github.com/user-attachments/assets/26dc46b0-5c08-4cd8-8c8e-2bc95a8ab561" />
-
 Secure configuration
 Security posture visibility
 Vulnerability assessment
@@ -808,16 +806,36 @@ or statement_s has_any (
     affected_rows_d
 ```
 
+
+
  ### Security use case
 
  This detection helps identify potential:
 
- - Unauthorized PII access
+- Unauthorized PII access
 - Patient-record modification
 - Patient-record deletion
 - Suspicious bulk operations
 - Insider-threat indicators
 - Compromised credentials
+
+Detect Failed Login Attempt
+
+<img width="1090" height="911" alt="Screenshot from 2026-08-05 03-52-11" src="https://github.com/user-attachments/assets/716207f9-f01c-42ac-ae20-0710c6b91ab0" />
+
+
+Detect UnAuthorized Update
+
+<img width="1090" height="911" alt="Screenshot from 2026-08-05 03-52-39" src="https://github.com/user-attachments/assets/7de9f7fc-c5c6-495e-a02f-7692a601826a" />
+
+Multiple SQL Delete
+
+<img width="1090" height="911" alt="Screenshot from 2026-08-05 03-52-11" src="https://github.com/user-attachments/assets/25e9d048-3054-4059-9e77-422d425dbb53" />
+
+
+
+
+
 
 ---
 
