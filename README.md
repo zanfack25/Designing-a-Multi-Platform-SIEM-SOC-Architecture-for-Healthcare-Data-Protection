@@ -37,6 +37,12 @@ High-Level Architecture
 
 <img width="948" height="528" alt="image" src="https://github.com/user-attachments/assets/9e9920d4-5702-4880-a6c5-aa97f43fa247" />
 
+<img width="1302" height="724" alt="image" src="https://github.com/user-attachments/assets/213e7129-8a15-4eaa-a060-7925d2885541" />
+
+# Final Dashboard for SOC Analytics
+
+<img width="1731" height="967" alt="image" src="https://github.com/user-attachments/assets/464372b0-2b90-4999-be06-e648649ccac2" />
+
 
 # Architecture Data Flow
 
@@ -269,6 +275,12 @@ SQL auditing
 Diagnostic logging
 Database monitoring
 
+
+<img width="1296" height="513" alt="image" src="https://github.com/user-attachments/assets/d3a664c6-d144-4100-b993-2a0d9a89c8a8" />
+
+
+
+
 # Step 2 — Configure the Healthcare Database Schema
 The Patients table was created to simulate a healthcare data repository containing sensitive information.
 
@@ -428,6 +440,13 @@ Azure VM
 
  Splunk was configured as an additional SIEM platform to provide an independent security analytics layer.
 
+
+<img width="1296" height="521" alt="image" src="https://github.com/user-attachments/assets/3968be64-39d2-4165-af83-9d4894601729" />
+
+
+
+<img width="1296" height="559" alt="image" src="https://github.com/user-attachments/assets/0a1469a5-69a3-48e1-a174-3c6c690c3d5f" />
+
  ### Example Splunk indexes
 
 ```
@@ -441,6 +460,11 @@ patient_sql_audit
 security_alerts
 telemetry
 ```
+
+Install Splunk in Azure VM 
+
+<img width="1296" height="523" alt="image" src="https://github.com/user-attachments/assets/391284c7-cf70-4547-a33c-b3b3efd6fbcf" />
+
 
 ---
 
@@ -478,7 +502,7 @@ enableDataIntegrityControl = 1
 
 ---
 
- # 10\. Microsoft Defender for Cloud
+ # 10\. Deployed Microsoft Defender for Cloud
 
  Microsoft Defender for Cloud was deployed to provide cloud security posture and workload protection capabilities.
 
@@ -494,9 +518,12 @@ enableDataIntegrityControl = 1
 
  The Defender telemetry contributes to the overall SOC monitoring architecture.
 
+
+<img width="1120" height="897" alt="image" src="https://github.com/user-attachments/assets/9a5ce605-3611-415a-ad87-2a0892a44ee7" />
+
 ---
 
- # 11\. Azure SQL Auditing
+ # 11\. Azure SQL Logging and Auditing
 
  Azure SQL auditing was configured to monitor database activity.
 
@@ -512,6 +539,10 @@ enableDataIntegrityControl = 1
 - Success/failure status
 - Affected rows
 - Security-relevant SQL operations
+
+
+<img width="1296" height="539" alt="image" src="https://github.com/user-attachments/assets/844c77ac-7508-4cf0-9125-d5b84be6c21c" />
+
 
 ---
 
@@ -535,6 +566,11 @@ Log Analytics Workspace
          └── Splunk
 ```
 
+<img width="1296" height="438" alt="image" src="https://github.com/user-attachments/assets/4f74591c-7afc-4ec4-87b8-30c5db9992cd" />
+
+
+<img width="1239" height="438" alt="image" src="https://github.com/user-attachments/assets/cc75312b-252e-468c-856c-6cefa445a664" />
+
 ---
 
  # 13\. Verify Azure Log Collection
@@ -553,6 +589,11 @@ Log Analytics Workspace
 8. Validate user identity
 9. Validate source IP
 10. Forward relevant telemetry to SIEM platforms
+
+
+<img width="1120" height="1026" alt="image" src="https://github.com/user-attachments/assets/a81da0d0-56a2-4a08-8aa6-03f910a53e95" />
+
+
 
 ---
 
@@ -576,9 +617,13 @@ Identity
 
  This contributes to the **AAA security model**:
 
- - **Authentication**
+- **Authentication**
 - **Authorization**
 - **Accounting**
+
+<img width="1239" height="525" alt="image" src="https://github.com/user-attachments/assets/aeddffea-6488-4be1-b1ae-27ff4844ae5e" />
+
+
 
 ---
 
@@ -604,7 +649,21 @@ Log Analytics Workspace
       └── Splunk
 ```
 
+<img width="1143" height="968" alt="image" src="https://github.com/user-attachments/assets/a7603933-78c4-4f1b-971b-0fb28ceb2713" />
+
+
+
 ---
+
+Forwarded Database Logs to Workspace
+
+<img width="1308" height="931" alt="image" src="https://github.com/user-attachments/assets/cb3f0cb8-7862-480a-a0de-2a29b00bbbc3" />
+
+
+Create Input for Azure Log Analytic
+
+<img width="1239" height="344" alt="image" src="https://github.com/user-attachments/assets/2b683cef-5dc8-4356-8a0b-9e3bf38a2dcd" />
+
 
  # 16\. Healthcare Database Security Detection
 
@@ -964,6 +1023,15 @@ Security Incident
  # 23\. Security Dashboards
 
  The project includes dashboards designed around the major security use cases.
+
+
+# Create the Dashboard for Logs analytics
+
+<img width="1731" height="967" alt="image" src="https://github.com/user-attachments/assets/464372b0-2b90-4999-be06-e648649ccac2" />
+
+
+
+
 
  ## Dashboard 1 — Healthcare Database Security
 
