@@ -279,6 +279,8 @@ Database monitoring
 <img width="1296" height="513" alt="image" src="https://github.com/user-attachments/assets/d3a664c6-d144-4100-b993-2a0d9a89c8a8" />
 
 
+<img width="1403" height="911" alt="Screenshot from 2026-08-05 02-19-55" src="https://github.com/user-attachments/assets/d3a89e92-924a-4847-af8b-6273415ea591" />
+
 
 
 # Step 2 — Configure the Healthcare Database Schema
@@ -294,6 +296,13 @@ Unauthorized access
 PII access
 Suspicious SQL statements
 
+
+<img width="1369" height="1007" alt="Screenshot from 2026-08-01 16-48-09" src="https://github.com/user-attachments/assets/c941a76e-a0d4-49c4-9874-599ca455d352" />
+
+<img width="1369" height="1007" alt="Screenshot from 2026-08-01 17-16-07" src="https://github.com/user-attachments/assets/2390c269-b8c9-4370-97c9-dc8b6e5795c2" />
+
+
+
 # Step 3 Deploy Splunk Enterprise
 A dedicated Azure Virtual Machine was created for the Splunk deployment.
 Azure VM
@@ -306,6 +315,27 @@ Azure VM
       └── Security Dashboards
       
 Splunk was configured as an additional SIEM platform to provide an independent security analytics layer.
+
+
+
+Create a VM for Splunk
+
+<img width="1144" height="1007" alt="Screenshot from 2026-08-03 14-25-31" src="https://github.com/user-attachments/assets/b1b10a25-3153-4125-933e-cbb4277fceda" />
+
+<img width="1367" height="1052" alt="Screenshot from 2026-08-03 14-31-08" src="https://github.com/user-attachments/assets/15d696a0-74a1-41e1-a444-f564a7965b14" />
+
+Install Splunk  Enterprise Server on Azure VM Instance
+
+<img width="1056" height="760" alt="Screenshot from 2026-08-03 15-05-12" src="https://github.com/user-attachments/assets/c4a5de10-93ce-435d-bcfb-cbd3dd669666" />
+
+Verified Splunk Server is enabled and running
+
+<img width="1056" height="760" alt="Screenshot from 2026-08-03 15-23-34" src="https://github.com/user-attachments/assets/7e622bfc-8bfc-4a9b-a833-4614b7ef33b0" />
+
+Splunk First Admin Dashboard
+
+<img width="1243" height="920" alt="Screenshot from 2026-08-04 01-21-05" src="https://github.com/user-attachments/assets/7b0f71e9-8cad-4634-b4b6-284b8c46cc93" />
+
 
 
 Splunk Indexes:
@@ -329,12 +359,21 @@ network_security
 patient_access
 patient_pii
 
+<img width="1547" height="931" alt="Screenshot from 2026-08-04 03-26-19" src="https://github.com/user-attachments/assets/3e1affbf-57a8-4608-8437-8724ff09991d" />
+
+
+<img width="1547" height="931" alt="Screenshot from 2026-08-04 03-26-39" src="https://github.com/user-attachments/assets/deba8491-a5b8-4020-9e30-83d2f33eb436" />
+
+<img width="1014" height="911" alt="Screenshot from 2026-08-05 03-41-48" src="https://github.com/user-attachments/assets/cef0322c-2a31-4b69-bde0-e3186ac36654" />
+
+
 # Step 4 🛡️ Microsoft Defender for Cloud
 Microsoft Defender for Cloud was deployed to provide cloud security posture and workload protection capabilities.
 
 The implementation focused on:
 
-Security recommendations
+Security recommendations<img width="1547" height="931" alt="Screenshot from 2026-08-04 03-26-19" src="https://github.com/user-attachments/assets/26dc46b0-5c08-4cd8-8c8e-2bc95a8ab561" />
+
 Secure configuration
 Security posture visibility
 Vulnerability assessment
@@ -377,6 +416,14 @@ Log Analytics Workspace
          └── Splunk
 
 
+
+
+
+
+
+<img width="1270" height="911" alt="Screenshot from 2026-08-05 05-02-25" src="https://github.com/user-attachments/assets/a0ff12af-bafe-4225-9c8e-91cb092b6ec8" />
+
+
 # Step 7: Verify Azure Log Collection
 Azure diagnostic logging was validated by generating and querying activity within the healthcare database.
 
@@ -414,13 +461,6 @@ Authentication
 Authorization
 Accounting
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
----
 
 
  # 8\. Deploy Splunk Enterprise
@@ -579,7 +619,7 @@ Log Analytics Workspace
 
  The validation process included:
 
- 1. Generate database activity
+1. Generate database activity
 2. Verify diagnostic settings
 3. Confirm logs arrive in Log Analytics
 4. Query `AzureDiagnostics`
@@ -901,6 +941,9 @@ Azure Firewall
    ▼
 VNet
    │
+   ▼
+Azure Bastion
+   │
    ├── Application Subnet
    │
    ├── Database Subnet
@@ -913,12 +956,23 @@ VNet
 
  Security controls include:
 
- - Network segmentation
+- Network segmentation
 - NSG rules
 - Firewall rules
 - Restricted database access
 - Logging of allowed/blocked traffic
 - Monitoring of TCP/1433 connections
+
+Create Virtual network 
+
+<img width="1110" height="760" alt="Screenshot from 2026-08-01 16-04-57" src="https://github.com/user-attachments/assets/8e2a410e-dee4-4fac-999e-77f92c609c31" />
+
+
+<img width="974" height="936" alt="Screenshot from 2026-08-01 16-08-10" src="https://github.com/user-attachments/assets/b3fa19c1-4cee-4d73-8873-83edbd0f1440" />
+
+<img width="1243" height="1007" alt="Screenshot from 2026-08-01 16-17-34" src="https://github.com/user-attachments/assets/3f79d00d-1c6b-43c5-8572-f539c6cc6f31" />
+
+
 
 ---
 
@@ -1066,7 +1120,7 @@ Security Incident
 
  Visualizations:
 
- - Allowed connections
+- Allowed connections
 - Blocked connections
 - Top source IPs
 - Destination IPs
@@ -1074,6 +1128,12 @@ Security Incident
 - TCP/1433 activity
 - Firewall actions
 - NSG actions
+
+# Azure Firewall 
+
+<img width="1724" height="995" alt="image" src="https://github.com/user-attachments/assets/89a97cf5-19ec-4357-a0a6-251681bb649b" />
+
+
 
 ---
 
@@ -1254,63 +1314,7 @@ AI Agent
 
  All penetration testing should be conducted only against systems for which authorization has been explicitly granted.
 
----
 
- # 28\. End-to-End Implementation Workflow
-
-```
-1. Define healthcare security requirements
-             ↓
-2. Create Azure Resource Group
-             ↓
-3. Design VNet and subnets
-             ↓
-4. Configure NSGs
-             ↓
-5. Deploy Azure Firewall
-             ↓
-6. Create Azure SQL Server
-             ↓
-7. Create HealthCare-DataBase
-             ↓
-8. Create Patients table
-             ↓
-9. Configure SQL auditing
-             ↓
-10. Deploy Log Analytics Workspace
-             ↓
-11. Configure Diagnostic Settings
-             ↓
-12. Verify Azure telemetry
-             ↓
-13. Deploy Defender for Cloud
-             ↓
-14. Configure Microsoft Entra ID
-             ↓
-15. Create Data Collection Rules
-             ↓
-16. Deploy Splunk Enterprise VM
-             ↓
-17. Configure Splunk indexes
-             ↓
-18. Forward Azure telemetry
-             ↓
-19. Develop KQL detections
-             ↓
-20. Develop Splunk searches
-             ↓
-21. Create security dashboards
-             ↓
-22. Generate controlled security events
-             ↓
-23. Validate detections
-             ↓
-24. Investigate alerts
-             ↓
-25. Document findings
-```
-
----
 
  # 29\.  Project Outcomes
 
